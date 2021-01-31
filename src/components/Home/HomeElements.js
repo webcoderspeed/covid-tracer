@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 
 export const HomePage = styled.div`
-    height: 100vh;
     position: relative;
     overflow: hidden;
+    height:100vh;
 `
 
 export const BackgroundVideo = styled.video`
@@ -17,23 +17,27 @@ export const BackgroundVideo = styled.video`
 export const Intro = styled.div`
     display: flex;
     flex-direction:column;
-    margin: 5% 15%;
+    margin:10%;
     width:50%;
     gap:50px;
 
+    @media(max-width:1024px){
+        width:80%;
+        margin:25% 10%;
+    }
+
     @media(max-width:991px){
         width:80%;
-        margin:5%;
-        gap:35px;
+        margin:10% 5%;
     }
 
     @media(max-width:768px){
         width:100%;
-        margin:2%;
     }
     @media(max-width:480px){
         margin:25% auto;
         padding:3%;
+        gap:35px;
     }
 `
 
@@ -45,19 +49,14 @@ export const Legend = styled.span`
     border-radius: 15px;
     text-align: center;
     width: 35%;
-    margin-left:4%;
 
-    @media(max-width:991px){
-        margin:5% 3%;
-    }
 
     @media(max-width:768px){
         width:50%;
-        margin-left:5%;
     }
 
     @media(max-width:480px){
-        width:50%;
+        width:70%;
         margin:0 auto; 
         font-size:0.9rem;
     }
@@ -71,62 +70,47 @@ export const Title = styled.h1`
 
     @media(max-width:768px){
         font-size:3rem;
-        margin-left:-10%;
     }
 
     @media(max-width:480px){
         font-size:2rem;
         margin:0 auto;
+        text-align:center;
     }
 `
 
 export const HighLight = styled.span`
     color: rgb(231, 181, 54);
     width:100%;
-    padding-right:10%;
 
     @media(max-width:768px){
         font-size:3rem;
-        padding-right:8%;
     }
 
     @media(max-width:480px){
         font-size:2rem;
-        padding:2%;
     }
 `
 
 export const Desc = styled.p`
     color: #fff;
     font-size: 1.5rem;
-    margin-left:2%;
     width:65%;
-    padding-right:5%;
 
     @media(max-width:768px){
-        padding-right:8%;
         width:70%;
     }
     
     @media(max-width:480px){
         width:100%;
-        font-size:1rem;
+        font-size:1.2rem;
         padding:2%;
+        text-align:justify;
     }
 `
 
 export const Row = styled.div`
     display:flex;
-    margin-left:5%;
-
-
-    @media(max-width:991px){
-    margin-left:2%;
-    }
-
-    @media(max-width:768px){
-    margin-left:5%;
-    }
 
     @media(max-width:480px){
       margin:0 auto;

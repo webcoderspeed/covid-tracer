@@ -1,9 +1,9 @@
-import './App.css';
 import React from 'react'
 import {BrowserRouter as Router, Switch,  Route} from 'react-router-dom'
 import GlobalStyle from './globalStyles'
 import Home from './components/Home/Home';
 import Tracer from './components/Tracer/Tracer'
+import Prevention from './components/Prevention/Prevention'
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
               <h1>About</h1>
             </Route>
             <Route path='/prevention'>
-              <h1>Prevention</h1>
+            <Prevention />
             </Route>
             <Route path='/contact-us'>
               <h1>Contact Us</h1>
