@@ -57,8 +57,8 @@ const Tracer = () => {
   },[])
 
   const handleDays = (day) => {
-     day = document.getElementById('day').value
-      document.querySelector('.range').textContent= day
+      day = document.getElementById('day').value
+      document.querySelector('.range').textContent = day
    setDays(day)   
   }
 
@@ -144,7 +144,7 @@ const Tracer = () => {
           {casesType.toUpperCase()}
         </CaseType>
         <Meter type='range' min='5' max='999' onChange={handleDays} id='day'/>
-        <Value className='range'>5</Value>
+        <Value className='range'>30</Value>
         <BarGraph days={days} caseType={casesType} />
       </Day>
    </APP>

@@ -19,7 +19,6 @@ flex-direction: ${({imgStart}) => (imgStart ? 'row-reverse' : 'row')
     margin:-30% auto;
 }
 `
-
 export const InfoColumn = styled.div`
 margin-bottom:15px;
 padding:0 15px;

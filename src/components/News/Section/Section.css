@@ -1,0 +1,164 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body{
+    background: radial-gradient(#003, #000);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.highlight{
+    color: #b78846;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.search{
+    display: flex;
+}
+
+#keyword{
+    outline: 0;
+    border: 0;
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+    padding-left: 5%;
+    height: 26px;
+}
+
+button{
+    background: #b78846;
+    color: #fff;
+    padding: 5px 10px;
+    outline: 0;
+    border: 0;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+}
+
+.section{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 1%;
+    border: 2px solid #b78846;
+    font-family: "Open Sans";
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.image{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    z-index: 2;
+    padding-left: -100px;
+}
+
+.overflow{
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to right,black 60%,white);
+    opacity: 0.9;
+    height: 100%;
+    width: 100%;
+}
+
+.image:hover .overflow{
+    opacity:0.5;
+}
+
+.image > .title{
+    opacity: 1;
+    position: absolute;
+    bottom: -1000px;
+    left: 50px;
+    transition: all 0.5s ease;
+    font-size: 3rem;
+    width: 50%;
+    z-index: 2;
+}
+.image > p{
+    opacity: 1;
+    position: absolute;
+    bottom: -1000px;
+    transition: all 0.5s ease;
+    z-index: 2;
+    width: 80%;
+    left: 50px;
+    font-size: 1.5rem;
+}
+
+.image:hover .title{
+    bottom: 125px;
+    left: 50px;
+    opacity: 1;
+    cursor: pointer;
+}
+.image:hover p{
+    bottom: 20px;
+    opacity: 1;
+}
+
+.date{
+    background: rgba(0, 0, 0, 0.534);
+    padding: 10px 20px;
+    border-radius: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    z-index: 3;
+}
+
+
+
+@media(max-width:991px){
+    .image:hover .title{
+        bottom: 175px;
+        left: 15px;
+        width: 70%;
+        opacity: 1;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+    .image:hover p{
+        bottom: 20px;
+        left: 15px;
+        opacity: 1;
+        font-size: 18px;
+    }
+
+    .heading{
+        flex-direction: column;
+        gap: 15px;
+        margin: 15px 0;
+    }
+}
+
+@media(max-width:480px){
+    .image:hover .title{
+        font-size: 1.5rem;
+    }
+    .image:hover p{
+        font-size: 1rem;
+    }
+    .heading{
+        text-align: center;
+    }
+}
